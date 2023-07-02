@@ -11,7 +11,15 @@ def generateChatResponse(prompt):
     question ={}
     question['role'] = 'user'
     question['content'] = prompt
-    response = openai.ChatCompletion.create(model="gpt-3.5-turbo",messages=messages)
+    response = openai.ChatCompletion.create(
+    model="text-davinci-003",
+    messages=messages,
+    temperature=1,
+    max_tokens=256,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0
+    )
     try:
         answer = response['choices'][0]['message']['content']
     except:
