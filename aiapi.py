@@ -6,7 +6,7 @@ openai.api_key = api_key
 
 def generateChatResponse(prompt):
     messages =[]
-    messages.append(  {"role": "system", "content": "You are a helpful assistant."})
+    messages.append(  {"role": "system", "content": "Please review my CV and provide specific feedback on how I can improve it. I am particularly interested in your suggestions regarding the content, formatting, and overall presentation. Your detailed comments will greatly help me in making my CV more effective and impactful."})
 
     question ={}
     question['role'] = 'user'
